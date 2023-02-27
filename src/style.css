@@ -1,5 +1,10 @@
+:root {
+  --primary-color: #fff;
+  --focus-color: #fff59e;
+}
+
 body {
-  background-color: #fff;
+  background-color: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,7 +52,7 @@ h2 {
 .submit-button {
   border: none;
   background: url("./enter.png");
-  background-color: #fff;
+  background-color: var(--primary-color);
   background-repeat: no-repeat;
   background-position: center;
   width: 40px;
@@ -83,6 +88,7 @@ h2 {
   gap: 40px;
   align-items: center;
   justify-content: space-between;
+  background-color: var(--primary-color);
 }
 
 #task {
@@ -93,6 +99,7 @@ h2 {
   display: flex;
   align-items: center;
   font-weight: 100;
+  text-decoration: none;
 }
 
 .first-row,
@@ -137,7 +144,7 @@ h2 {
 }
 
 .delete {
-  background-color: #fff;
+  background-color: var(--primary-color);
   border: none;
 }
 
@@ -159,4 +166,8 @@ h2 {
 .text-input:focus,
 #task:focus {
   outline: none;
+}
+
+.focus-color {
+  background-color: var(--focus-color);
 }

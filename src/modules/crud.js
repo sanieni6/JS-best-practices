@@ -72,10 +72,9 @@ export const create = () => {
   checkBoxesArr = checkboxes;
   updateCheckBoxes();
   remove.forEach((element, index) => element.addEventListener('focus', () => {
-    liElement[index].style.background = '#fff59e';
-    element.style.background = '#fff59e';
-    element.style.textDecoration = 'none';
-    deleteButton[index].style.background = '#fff59e';
+    liElement[index].classList.add('focus-color');
+    element.classList.add('focus-color');
+    deleteButton[index].classList.add('focus-color');
     dots[index].classList.add('hidden');
     trash[index].classList.remove('hidden');
     deleteButton[index].addEventListener('click', () => {
@@ -87,9 +86,9 @@ export const create = () => {
   }));
   remove.forEach((element, index) => element.addEventListener('blur', () => {
     updateCheckBoxes();
-    liElement[index].style.background = '#fff';
-    element.style.background = '#fff';
-    deleteButton[index].style.background = '#fff';
+    liElement[index].classList.remove('focus-color');
+    element.classList.remove('focus-color');
+    deleteButton[index].classList.remove('focus-color');
     trash[index].classList.add('hidden');
     dots[index].classList.remove('hidden');
     if (edit(element, index)) { create(); }

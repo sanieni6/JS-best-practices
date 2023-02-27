@@ -1,7 +1,3 @@
-/* eslint-disable no-unused-vars */
-// eslint-disable-next-line no-unused-vars
-// eslint-disable-next-line import/no-unresolved
-import _ from 'lodash';
 import './style.css';
 import * as crud from './modules/crud.js';
 
